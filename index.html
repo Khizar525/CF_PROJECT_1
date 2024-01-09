@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Your Knowledge</title>
+</head>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #fffefe;
+    }
+    .nav{
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        color: #020101;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Roboto Slab', serif;
+        align-items: center;
+     border: solid 1px #000000;
+        border-radius: 5px
+    
+    }
+    .logo{
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #050303;
+        text-decoration: none;
+        text-align: left;
+        margin-left: 10px;
+    
+    }
+    .logo:hover{
+        color: #faea06;
+    }
+    .tabs{
+        float: right;
+        margin-left: 800px;
+        text-align: center;
+    }
+    .tabs a{
+        color: #000000;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: 'Roboto Slab', serif;
+    }
+    .tabs a:hover{
+        background-color: #faea06;
+        color: #000;
+    }
+    .tabs a.active{
+        background-color: #fff;
+        color: #000;
+    }
+    .banner{
+        background-image: url(https://st4.depositphotos.com/2001403/20595/i/450/depositphotos_205955384-stock-photo-back-school-background-rocket-made.jpg);
+        background-size: cover;
+        height: 500px;
+    }
+    .banner p{
+        font-size: 30px;
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .bannerMainText{
+        font-size: 50px;
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #wrapper{
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 223, 0, 1) 0%, rgba(218, 165, 32, 1) 100%);
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+    #form-box{
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.5);
+        border-radius: 10px;
+    }
+    #form-box label{
+        color: black;
+        font-size: 20px;
+        font-family: 'Roboto Slab', serif;
+        margin-left: 10px;
+    }
+    #form-box input{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: 'Roboto Slab', serif;
+        border: none;
+        border-bottom: 1px solid #000000;
+        outline: none;
+    }
+    #form-box select{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: 'Roboto Slab', serif;
+        border: none;
+        border-bottom: 1px solid #000000;
+        outline: none;
+    }
+
+    
+ .banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://st4.depositphotos.com/2001403/20595/i/450/depositphotos_205955384-stock-photo-back-school-background-rocket-made.jpg);
+  background-size: cover;
+  height: 500px;
+  position: relative; 
+}
+
+.banner .startButton {
+  display: block;
+  width: 180px;
+  height: 60px;
+  background-color: #ffffff;
+  color: #080800;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  position: absolute; 
+  bottom: 20px; 
+}
+    .startbtnText{
+        font-size: 20px;
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+    }
+    .startButton:hover{
+        background-color: #fde400;
+        color: #000;
+    }
+   
+    .startBtn{
+    margin-top: 200px;
+    align-items: center;
+    font-size: 20px;
+    bottom: 20px;
+     margin-left: 120px;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, border 0.2s, color 0.2s;
+    
+    }
+    .startBtn:hover{
+        background-color: #fde400;
+        color: #000000;
+    }
+    .quiz {
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    height: 100vh;
+}
+
+#info {
+    height: 25px;
+    background-color: #fff;
+}
+
+#score,
+#ques-left {
+    width: 50%;
+    float: left;
+    font-size: 25px;
+   
+}
+
+#ques-view {
+    height: 35px;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+.ques-circle {
+    float: left;
+    border-radius: 50%;
+    width: 35px;
+    height: 90%;
+    margin-left: 10px;
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ques-circle span {
+    transform: translateX(-50%);
+}
+
+.correct {
+    background-color: #2ecc71;
+}
+
+.incorrect {
+    background-color: #fc5c65;
+    color: #fff;
+}
+
+.question {
+    background: radial-gradient(circle, rgba(255, 223, 0, 1) 0%, rgba(218, 165, 32, 1) 100%);
+    color: #000000;
+    font-family: 'Roboto Slab', sans-serif;
+    letter-spacing: 0.13em;
+    padding: 10px;
+}
+
+.choice {
+    background-color: #fff;
+    padding: 3%;
+}
+
+.options {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.options input[type="radio"]:checked + label {
+    background: radial-gradient(circle, rgba(255, 223, 0, 1) 0%, rgba(218, 165, 32, 1) 100%);
+    color: black;
+}
+
+.options label {
+    background-color: #fff;
+    color: black; /* Set the font color to black */
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options label:hover {
+    background-color: rgb(255, 255, 255);
+    border: solid 2px goldenrod;
+}
+input[type=radio] {
+    display: none;
+}
+
+
+   
+
+
+.submit-answer {
+    margin-top: 40px;
+    margin-left: 130px;
+    align-items: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, border 0.2s, color 0.2s;
+}
+
+.submit-answer:hover {
+    background-color: goldenrod;
+    padding: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+
+.view-results {
+   
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, border 0.2s, color 0.2s;
+}
+
+.view-results:hover {
+    background-color: #26b1a5;
+    padding: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.final-result {
+    background: radial-gradient(circle, rgba(255, 223, 0, 1) 0%, rgba(218, 165, 32, 1) 100%);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    height: 700px;
+}
+
+.solved-ques-no,
+.right-wrong,
+#display-final-score,
+.remark {
+    padding: 10px;
+}
+
+#restart {
+    margin-top: 60px;
+    background-color: #ffffff;
+    margin-left: 30px;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 80%;
+    transition: background-color 0.3s, border 0.2s, color 0.2s;
+}
+
+#restart:hover {
+    background-color: #FF9933;
+    color: #f6fa0e;
+    cursor: pointer;
+    font-size: 90%;
+}
+</style>
+<body>
+<div class="nav">
+    <h4 class="logo">TestYourKnowledge</h4>
+    <div class="tabs">
+        <a href="ProjectInfo.html">ProjectInfo</a>
+    </div>
+</div>
+<div class="banner">
+    <header>
+        <h1 class="bannerMainText">Test Your Skills</h1>
+        <p>Welcome to the quiz! Fill out the form below:</p>
+    </header>
+    <a class="startButton" href="#quiz" id="scrollToQuiz"><h2 class="startbtnText">Get Started</h2></a>
+   
+</div>
+
+
+    <div id="wrapper">
+        <div id="form-box">
+            <form>
+                <form id="quizForm">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+            </form>
+                <select id="course">
+                    <option value="CP" selected="selected">Computer Programming</option>
+                    <option value="CF">Computer Fundamentals</option>
+                    <option value="AP">Applied Physics</option>
+                    <option value="FE">Functional English</option>
+                    <option value="TJ">Tajweed</option>
+                </select>  
+            </form>
+            <button class="startBtn">Start Quiz</button>
+        </div>
+    </div>
+
+    <div class="quiz">
+        <div id="info">
+            <div id="score">Score: 0</div>
+            <div id="ques-left">Question: 1/10</div>
+        </div>
+        <div id="ques-view"></div>
+        <div class="question">
+            <h1>Question</h1>
+        </div>
+        <div class="choice">
+            <div class="options"><input type="radio" name="options" value="option1"  id="opt0"><label for="opt0" id="lb0">Option1</label></div>
+            <div class="options"><input type="radio" name="options" value="option2" id="opt1"><label for="opt1" id="lb1">Option2</label></div>
+            <div class="options"><input type="radio" name="options" value="option3" checked="checked" id="opt2"><label for="opt2" id="lb2">Option3</label></div>
+            <div class="options"><input type="radio" name="options" value="option4" id="opt3"><label for="opt3" id="lb3">Option4</label></div>
+        </div>
+        <div class="ans-btn">
+            <button type="button" class="submit-answer">Submit Answer</button>
+            <a href="#display-final-score" class="view-results" onclick="hideButton()">View Results</a>
+        </div>
+    </div>
+
+    <div class="final-result">
+        <h1  >The Quiz is Over </h1>
+        <div class="solved-ques-no">You Solved 10 questions of <span id="quiz-topic">Computer Programming</span></div>
+        <div class="right-wrong">3 Were Right and 4 were Wrong</div>
+        <div id="display-final-score">Your Final Score is: 35</div>
+        <div class="remark">Remark: Satisfactory, Keep trying.</div>
+        <button id="restart">Restart Quiz</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="new.js"></script>
+
+
+</body>
+
+</html>
