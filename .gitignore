@@ -1,0 +1,40 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+
+# Browser files
+*.log
+*.crx
+*.pem
+
+# Node modules (if used)
+node_modules/
+
+# Package files
+package-lock.json
+
+# Build output
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Local environment files
+.env
+.env.local
